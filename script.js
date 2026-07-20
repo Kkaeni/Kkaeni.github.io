@@ -43,7 +43,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .about-content', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .skills-container, .projects > .portfolio-container .portfolio-box, .about-content', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-content h3', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content p', { origin: 'right' });
 
@@ -55,13 +55,20 @@ function openModal(modalId) {
 
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
-    document.body.style.overflow = "auto";
+    checkAndRestoreScroll();
 }
 
 // Close modal when clicking outside of it
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
+        checkAndRestoreScroll();
+    }
+}
+
+function checkAndRestoreScroll() {
+    let anyOpen = Array.from(document.querySelectorAll('.modal')).some(m => m.style.display === "block");
+    if (!anyOpen) {
         document.body.style.overflow = "auto";
     }
 }

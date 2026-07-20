@@ -82,7 +82,7 @@
         <h2 class="heading">My <span>Skills</span></h2>
 
         <div class="skills-container">
-            <div class="skills-box">
+            <div class="skills-box" onclick="openModal('modal-procedural')" style="cursor: pointer;">
                 <i class='bx bx-cube-alt'></i>
                 <h3>Procedural Generation</h3>
                 <p>Houdini & Unreal Engine Pipeline, PCG, Node-based Procedural Workflows</p>
@@ -92,7 +92,7 @@
                 <h3>Pipeline & Automation</h3>
                 <p>Python & C++ Scripting, Houdini & Unreal Engine Tool Development, Workflow Automation</p>
             </div>
-            <div class="skills-box">
+            <div class="skills-box" onclick="openModal('modal-vfx')" style="cursor: pointer;">
                 <i class='bx bx-code-block'></i>
                 <h3>Visual Effects (FX)</h3>
                 <p>Houdini FX (Pyro, POP, MPM, Flip), Dynamic Simulation & Real-time FX</p>
@@ -583,7 +583,7 @@
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
 
                         <!-- Tool 1 -->
-                        <div class="portfolio-box" style="height: 250px;">
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-pipeline-tool1')">
                             <img src="E:\Kkaeni.github.io\Resource\My_Skills\Pipeline&Automation\Houdini_TextureLibrary_in_COP\Screenshot_1.png"
                                 alt="Tool 1" class="portfolio-img">
                             <div class="portfolio-layer">
@@ -594,7 +594,7 @@
                         </div>
 
                         <!-- Tool 2 -->
-                        <div class="portfolio-box" style="height: 250px;">
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-pipeline-tool2')">
                             <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Unreal+Script" alt="Tool 2"
                                 class="portfolio-img">
                             <div class="portfolio-layer">
@@ -605,7 +605,7 @@
                         </div>
 
                         <!-- Tool 3 -->
-                        <div class="portfolio-box" style="height: 250px;">
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-pipeline-tool3')">
                             <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Python+Automation"
                                 alt="Tool 3" class="portfolio-img">
                             <div class="portfolio-layer">
@@ -615,6 +615,201 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Tool 1 Modal -->
+        <div id="modal-pipeline-tool1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-pipeline-tool1')">&times;</span>
+                <h2 class="modal-title">Houdini TextureLibrary in COP</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">툴 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            후디니의 COP(Composite Operators) 네트워크를 활용하여 텍스처 라이브러리를 구축하고 관리하는 파이프라인 툴입니다.
+                        </p>
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">사용 프로그램</h3>
+                        <ul style="margin-bottom: 35px; padding-left: 25px; list-style-type: disc; font-size: 1.05em;">
+                            <li style="margin-bottom: 8px;">Houdini</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <h3 style="font-size: 1.5em; font-weight: 800; margin-bottom: 15px; color: #f0f0f0;">상세 이미지</h3>
+                        <img src="E:\Kkaeni.github.io\Resource\My_Skills\Pipeline&Automation\Houdini_TextureLibrary_in_COP\Screenshot_1.png" alt="Detail Image"
+                            style="width:100%; border-radius:10px; margin-bottom: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Tool 2 Modal -->
+        <div id="modal-pipeline-tool2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-pipeline-tool2')">&times;</span>
+                <h2 class="modal-title">Unreal Script</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">툴 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            언리얼 엔진 자동화 스크립트 설명이 들어갈 자리입니다.
+                        </p>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <img src="https://via.placeholder.com/800x450/222222/cccccc?text=Unreal+Script+Detail" alt="Detail Image"
+                            style="width:100%; border-radius:10px; margin-bottom: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Tool 3 Modal -->
+        <div id="modal-pipeline-tool3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-pipeline-tool3')">&times;</span>
+                <h2 class="modal-title">Python Automation</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">툴 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            워크플로우 자동화 설명이 들어갈 자리입니다.
+                        </p>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <img src="https://via.placeholder.com/800x450/222222/cccccc?text=Python+Automation+Detail" alt="Detail Image"
+                            style="width:100%; border-radius:10px; margin-bottom: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Procedural Generation Modal -->
+        <div id="modal-procedural" class="modal">
+            <div class="modal-content" style="max-width: 1200px;">
+                <span class="close-btn" onclick="closeModal('modal-procedural')">&times;</span>
+                <h2 class="modal-title">Procedural Generation Projects</h2>
+                <div class="modal-media">
+                    <div class="portfolio-container"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+                        
+                        <!-- Tool 1 -->
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-procedural-tool1')">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Procedural+Project+1" alt="Tool 1" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>Procedural Project 1</h4>
+                                <p>프로시저럴 프로젝트 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2 -->
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-procedural-tool2')">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Procedural+Project+2" alt="Tool 2" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>Procedural Project 2</h4>
+                                <p>프로시저럴 프로젝트 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Procedural Tool 1 Modal -->
+        <div id="modal-procedural-tool1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-procedural-tool1')">&times;</span>
+                <h2 class="modal-title">Procedural Project 1</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">프로젝트 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            프로시저럴 툴에 대한 상세 설명이 들어갈 자리입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Procedural Tool 2 Modal -->
+        <div id="modal-procedural-tool2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-procedural-tool2')">&times;</span>
+                <h2 class="modal-title">Procedural Project 2</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">프로젝트 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            프로시저럴 툴에 대한 상세 설명이 들어갈 자리입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VFX Modal -->
+        <div id="modal-vfx" class="modal">
+            <div class="modal-content" style="max-width: 1200px;">
+                <span class="close-btn" onclick="closeModal('modal-vfx')">&times;</span>
+                <h2 class="modal-title">Visual Effects (FX) Projects</h2>
+                <div class="modal-media">
+                    <div class="portfolio-container"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+                        
+                        <!-- Tool 1 -->
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-vfx-tool1')">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=VFX+Project+1" alt="Tool 1" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>VFX Project 1</h4>
+                                <p>이펙트 프로젝트 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2 -->
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;" onclick="openModal('modal-vfx-tool2')">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=VFX+Project+2" alt="Tool 2" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>VFX Project 2</h4>
+                                <p>이펙트 프로젝트 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VFX Tool 1 Modal -->
+        <div id="modal-vfx-tool1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-vfx-tool1')">&times;</span>
+                <h2 class="modal-title">VFX Project 1</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">프로젝트 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            FX 작업에 대한 상세 설명이 들어갈 자리입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VFX Tool 2 Modal -->
+        <div id="modal-vfx-tool2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-vfx-tool2')">&times;</span>
+                <h2 class="modal-title">VFX Project 2</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">프로젝트 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            FX 작업에 대한 상세 설명이 들어갈 자리입니다.
+                        </p>
                     </div>
                 </div>
             </div>
