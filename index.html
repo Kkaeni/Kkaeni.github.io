@@ -87,7 +87,7 @@
                 <h3>Procedural Generation</h3>
                 <p>Houdini & Unreal Engine Pipeline, PCG, Node-based Procedural Workflows</p>
             </div>
-            <div class="skills-box">
+            <div class="skills-box" onclick="openModal('modal-pipeline')" style="cursor: pointer;">
                 <i class='bx bx-map-alt'></i>
                 <h3>Pipeline & Automation</h3>
                 <p>Python & C++ Scripting, Houdini & Unreal Engine Tool Development, Workflow Automation</p>
@@ -568,6 +568,53 @@
                             style="width:100%; border-radius:10px; margin-bottom: 20px;">
                         <img src="Resource/Project_WakeOne/Controll_Re01.png" alt="WakeOne Image"
                             style="width:100%; border-radius:10px; margin-bottom: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline & Automation Modal -->
+        <div id="modal-pipeline" class="modal">
+            <div class="modal-content" style="max-width: 1200px;">
+                <span class="close-btn" onclick="closeModal('modal-pipeline')">&times;</span>
+                <h2 class="modal-title">Pipeline & Automation Projects</h2>
+                <div class="modal-media">
+                    <div class="portfolio-container"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+
+                        <!-- Tool 1 -->
+                        <div class="portfolio-box" style="height: 250px;">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Houdini+Tool+1"
+                                alt="Tool 1" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>Houdini Tool 1</h4>
+                                <p>파이프라인 툴 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2 -->
+                        <div class="portfolio-box" style="height: 250px;">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Unreal+Script" alt="Tool 2"
+                                class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>Unreal Script</h4>
+                                <p>자동화 스크립트 설명</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 3 -->
+                        <div class="portfolio-box" style="height: 250px;">
+                            <img src="https://via.placeholder.com/600x400/222222/cccccc?text=Python+Automation"
+                                alt="Tool 3" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>Python Automation</h4>
+                                <p>워크플로우 자동화</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
