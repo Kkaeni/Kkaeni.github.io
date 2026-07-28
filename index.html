@@ -687,7 +687,7 @@
                 <h2 class="modal-title">Pipeline & Automation</h2>
                 <div class="modal-media">
                     <div class="portfolio-container"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2.5rem; margin-top: 2rem;">
 
                         <!-- Tool 1 -->
                         <div class="portfolio-box" style="height: 250px; cursor: pointer;"
@@ -734,6 +734,18 @@
                             <div class="portfolio-layer">
                                 <h4>Houdini Textures MassProduction</h4>
                                 <p>후디니 COP & TOP을 활용한 텍스처 대량 생산 파이프라인 입니다.</p>
+                                <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Tool 5 -->
+                        <div class="portfolio-box" style="height: 250px; cursor: pointer;"
+                            onclick="openModal('modal-pipeline-tool5')">
+                            <img src="Resource\My_Skills\Pipeline&Automation\Comfy_Generate_Model\COmfyUI_View.jpg"
+                                alt="Tool 5" class="portfolio-img">
+                            <div class="portfolio-layer">
+                                <h4>ComfyUI_Generate_Model</h4>
+                                <p>컴피UI를 활용한 모델 생성 파이프라인 입니다.</p>
                                 <a href="javascript:void(0);"><i class='bx bx-search-alt-2'></i></a>
                             </div>
                         </div>
@@ -847,6 +859,47 @@
             </div>
         </div>
 
+        <!-- Pipeline Tool 5 Modal -->
+        <div id="modal-pipeline-tool5" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-pipeline-tool5')">&times;</span>
+                <h2 class="modal-title">ComfyUI Generate Model</h2>
+                <div class="modal-media">
+                    <div style="text-align: left; margin: 40px 0 40px 10px; line-height: 1.8; color: #f0f0f0;">
+                        <h3 style="font-size: 1.3em; font-weight: 800; margin-bottom: 15px;">툴 설명</h3>
+                        <p style="font-size: 1.05em; padding-left: 10px; margin-bottom: 25px;">
+                            컴피UI를 활용한 모델 생성 파이프라인 툴입니다.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <img src="Resource/My_Skills/Pipeline&Automation/Comfy_Generate_Model/Base_Image.png"
+                            alt="Detail Image" style="width:100%; border-radius:10px; margin-bottom: 15px;">
+                        <p
+                            style="font-size: 1.05em; color: #f0f0f0; line-height: 1.6; padding-left: 5px; margin-bottom: 35px;">
+                            &lt;ComfyUI 활용하여 생성한 이미지&gt;</p>
+                    </div>
+
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <img src="Resource/My_Skills/Pipeline&Automation/Comfy_Generate_Model/Multiview.png"
+                            alt="Detail Image" style="width:100%; border-radius:10px; margin-bottom: 15px;">
+                        <p
+                            style="font-size: 1.05em; color: #f0f0f0; line-height: 1.6; padding-left: 5px; margin-bottom: 35px;">
+                            &lt;ComfyUI를 활용하여 생성한 이미지를 ComfyUI MultyView를 통해 Front, Back, Left, Right 이미지로 생성&gt;</p>
+                    </div>
+
+                    <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
+                        <img src="Resource/My_Skills/Pipeline&Automation/Comfy_Generate_Model/Houdini_View.jpg"
+                            alt="Detail Image" style="width:100%; border-radius:10px; margin-bottom: 15px;">
+                        <p
+                            style="font-size: 1.05em; color: #f0f0f0; line-height: 1.6; padding-left: 5px; margin-bottom: 35px;">
+                            &lt;Front, Back, Left, Right 이미지를 활용하여 트렐리스로 지오메트리 & 텍스처를 생성한 후 후디니로 임포트한 이미지&gt;</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <!-- Procedural Generation Modal -->
         <div id="modal-procedural" class="modal">
             <div class="modal-content" style="max-width: 1200px;">
@@ -854,7 +907,7 @@
                 <h2 class="modal-title">Procedural Generation</h2>
                 <div class="modal-media">
                     <div class="portfolio-container"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2.5rem; margin-top: 2rem;">
 
                         <!-- Tool 1 -->
                         <div class="portfolio-box" style="height: 250px; cursor: pointer;"
@@ -950,7 +1003,7 @@
                 <h2 class="modal-title">Visual Effects (FX)</h2>
                 <div class="modal-media">
                     <div class="portfolio-container"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2.5rem; margin-top: 2rem;">
 
                         <!-- Tool 1 -->
                         <div class="portfolio-box" style="height: 250px; cursor: pointer;"

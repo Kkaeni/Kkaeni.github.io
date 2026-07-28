@@ -336,7 +336,7 @@ section {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     align-items: center;
     gap: 2.5rem;
 }
@@ -383,7 +383,7 @@ section {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 2rem;
     transform: translateY(100%);
     transition: .5s ease;
 }
@@ -396,12 +396,16 @@ section {
     font-size: 2rem;
     margin-bottom: .5rem;
     color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .portfolio-layer p {
     font-size: 1rem;
     margin-bottom: 1rem;
     color: #fff;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .portfolio-layer a {
@@ -552,4 +556,40 @@ section {
     line-height: 1.6;
     color: #ccc;
     white-space: pre-line;
+}
+
+/* Mobile Responsive Optimization for Modals & Portfolio Cards */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)) !important;
+        gap: 1.5rem !important;
+    }
+    .portfolio-box {
+        height: 250px;
+    }
+    .portfolio-layer {
+        padding: 0 1.2rem !important;
+    }
+    .portfolio-layer h4 {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    .portfolio-layer p {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    .modal-content {
+        width: 94% !important;
+        margin: 10% auto !important;
+        padding: 20px 15px !important;
+    }
+    .modal-title {
+        font-size: 1.8rem !important;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+    .modal-media p {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
 }
