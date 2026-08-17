@@ -48,11 +48,6 @@ ScrollReveal().reveal('.home-content h1, .about-content h3', { origin: 'left' })
 ScrollReveal().reveal('.home-content p, .about-content p', { origin: 'right' });
 
 // Modal logic
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-    document.body.style.overflow = "hidden"; // Prevent background scrolling
-}
-
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
     checkAndRestoreScroll();
@@ -70,5 +65,65 @@ function checkAndRestoreScroll() {
     let anyOpen = Array.from(document.querySelectorAll('.modal')).some(m => m.style.display === "block");
     if (!anyOpen) {
         document.body.style.overflow = "auto";
+    }
+}
+
+// Slideshow logic
+let slideIndex = 1;
+
+// Initialize slideshows when opening modals if they have a slideshow
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+    
+    // Check if there is a slideshow in this modal
+    let modal = document.getElementById(modalId);
+    let slides = modal.getElementsByClassName("mySlides");
+    if (slides.length > 0) {
+        slideIndex = 1;
+        showSlides(slideIndex, modalId);
+    }
+}
+
+// Next/previous controls
+function plusSlides(n) {
+    // Find the currently open modal
+    let openModals = Array.from(document.querySelectorAll('.modal')).filter(m => m.style.display === "block");
+    if (openModals.length > 0) {
+        showSlides(slideIndex += n, openModals[0].id);
+    }
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    let openModals = Array.from(document.querySelectorAll('.modal')).filter(m => m.style.display === "block");
+    if (openModals.length > 0) {
+        showSlides(slideIndex = n, openModals[0].id);
+    }
+}
+
+function showSlides(n, modalId) {
+    let i;
+    let modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    let slides = modal.getElementsByClassName("mySlides");
+    let dots = modal.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    if (slides.length > 0) {
+        slides[slideIndex-1].style.display = "block";
+    }
+    if (dots.length > 0) {
+        dots[slideIndex-1].className += " active";
     }
 }
